@@ -14,7 +14,7 @@ values(NULL,'$username','$email','$password','$address');
     $result = $user->execute();
     if($result)
     {
-        $_SESSION["user"] = ["username-" => $username,"email"=>$email];
+        $_SESSION["user"] = ["username" => $username,"email"=>$email];
         header("location: /question_discussion_website");
     }
     else
