@@ -17,11 +17,10 @@
 
                 <div class="mb-3 ">
                     <label for="category" class="form-label fw-semibold">Category</label>
-                    <select name="category" id="category" class="form-control shadow-sm" required>
-                        <option value="Mobiles">Mobiles</option>
-                        <option value="General">General</option>
-                        <option value="Coding">Coding</option>
-                    </select>
+                 <?php
+                    include('category.php');
+
+                 ?>
                 </div>
 
                 <button type="submit" name="login" class="btn btn-primary w-100 shadow">Submit</button>
