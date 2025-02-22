@@ -5,7 +5,7 @@
         $result = $conn->query($query);
 
         foreach ($result as $row) {
-            $name = $row['name'];
+            $name = ucfirst($row['name']);
             $id = $row['id'];
           echo "<option value=$id>$name</option>";
 
