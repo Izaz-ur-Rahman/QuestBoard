@@ -15,7 +15,10 @@
 
 
           ?>
-        <textarea class="form-control " name="" id="" placeholder="Your Answer..."></textarea>
-        <button class="btn btn-success my-2">Write Your Answer</button>
+  <form action="../server/requests.php" method="post">
+    <input type="hidden" name="question_id" value="<?php echo $qid ?>">
+    <textarea name="answer" class="form-control " name="" id="" placeholder="Your Answer..."></textarea>
+    <button class="btn btn-success my-2">Write Your Answer</button>
+  </form>
     </div>
 </div>
