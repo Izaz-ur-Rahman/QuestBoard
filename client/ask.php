@@ -23,7 +23,7 @@
                  ?>
                 </div>
 
-                <button type="submit" name="login" class="btn btn-primary w-100 shadow">Submit</button>
+                <button type="submit" name="ask" class="btn btn-primary w-100 shadow">Ask Question</button>
 
             </form>
         </div>

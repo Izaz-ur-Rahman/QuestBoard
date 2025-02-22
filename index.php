@@ -18,7 +18,7 @@ if (isset($_GET['SignUp']) && $_GET['SignUp'] == "true") {
     include('./client/signUp.php');
 } elseif (isset($_GET['login']) && $_GET['login'] == "true") {
     include('./client/login.php');
-} elseif($_GET['ask']) {
+} elseif(isset($_GET['ask']) && $_GET['ask']=="true") {
     // Optional: Add a default content if needed
     include('./client/ask.php');
 
