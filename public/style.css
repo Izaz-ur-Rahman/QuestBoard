@@ -4,3 +4,16 @@ a{
 .heading{
     text-align: center;
 }
+.question_list{
+    border:1px solid #ddd;
+    padding:15px;
+    margin: 10px;
+}
+.question_list h5{
+    margin: 0;
+    padding: 0;
+}
+.question_list a{
+    font-size: 18px;
+    text-decoration: none;
+}

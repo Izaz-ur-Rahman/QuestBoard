@@ -22,6 +22,8 @@ if (isset($_GET['SignUp']) && $_GET['SignUp'] == "true") {
     // Optional: Add a default content if needed
     include('./client/ask.php');
 
+}else{
+    include('./client/questions.php');
 }
 ?>
 
