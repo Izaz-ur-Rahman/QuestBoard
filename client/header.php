@@ -13,14 +13,14 @@
 
       if (isset($_SESSION['user']) && isset($_SESSION['user']['username'])) { ?>
         <li class="nav-item">
-          <a class="nav-link" href="?login=true">Logout</a>
+          <a class="nav-link" href="./server/requests.php?logout=true">Logout</a>
         </li>
       <?php } else { ?>
         <li class="nav-item">
           <a class="nav-link" href="?login=true">Login</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="?signUp=true">SignUp</a>
+          <a class="nav-link" href="?SignUp=true">SignUp</a>
         </li>
       <?php } ?>
 

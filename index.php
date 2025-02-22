@@ -14,13 +14,13 @@ session_start();
 include('./client/header.php');
 
 // Check conditions with isset() to avoid warnings
-if (isset($_GET['signUp']) && (!isset($_SESSION['user']) || !$_SESSION['user'])) {
+if (isset($_GET['SignUp']) && $_GET['SignUp'] == "true") {
     include('./client/signUp.php');
-} elseif (isset($_GET['login']) && (!isset($_SESSION['user']) || !$_SESSION['user'])) {
+} elseif (isset($_GET['login']) && $_GET['login'] == "true") {
     include('./client/login.php');
 } else {
     // Optional: Add a default content if needed
-    echo "<p>Welcome to the Discussion Project!</p>";
+    echo "<p></p>";
 }
 ?>
 

@@ -32,6 +32,7 @@ values(NULL,'$username','$email','$password','$address');
                 foreach ($result as $row) {
                     $username = $row['username'];
                 }
+                echo "record found username is ".$_POST['username'];
                 $_SESSION["user"] = ["username" => $username, "email" => $email];
                 header("location:/Question_discussion_system");
             }
@@ -39,5 +40,9 @@ values(NULL,'$username','$email','$password','$address');
                 echo "record not found";
             }
 
-}
+
+        }else if(isset($_GET['logout'])){
+            session_unset();
+            header("location:/Question_discussion_system");
+        }
 ?>
