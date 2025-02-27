@@ -1,8 +1,6 @@
 <?php
 session_start();
 include('../common/db.php');
-
-
 if (isset($_POST['SignUp'])) {
     $username = $_POST['username'];
     $password = $_POST['password'];
@@ -89,11 +87,7 @@ values(NULL,'$username','$email','$password','$address');
 
     if ($stmt->execute()) {
         // echo "Your answer is submitted successfully";
-        ?>
-        <div class="alert alert-success" role="alert">
-        Your answer is submitted successfully!
-</div><?php
-        // header("Location: /question_discussion_website");
+        header("Location: /question_discussion_website?q-id=$question_id");
         exit;
     } else {
         echo "Error submitting answer: " . $stmt->error;
