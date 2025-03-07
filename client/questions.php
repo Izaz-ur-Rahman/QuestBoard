@@ -1,9 +1,12 @@
 <div class="container">
-    <h1 class="text-center">
-        Questions
-    </h1>
+
+    <div class="row">
     <div class="col-8">
+        <h1 class="text-center">
+            Questions
+        </h1>
         <?php
+
 include('./common/db.php');
 $query = "select * from questions";
 $result = $conn->query($query);
@@ -20,4 +23,9 @@ $result = $conn->query($query);
 
     ?>
     </div>
+
+    <div class="col-4">
+        <?php include("categorylist.php");?>
+    </div>
+   </div>
 </div>

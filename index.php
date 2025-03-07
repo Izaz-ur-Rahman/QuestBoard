@@ -22,9 +22,18 @@ if (isset($_GET['SignUp']) && $_GET['SignUp'] == "true") {
     // Optional: Add a default content if needed
     include('./client/ask.php');
 
-} elseif(isset($_GET['q-id'])) {
+}
+// for getting question  id
+
+elseif(isset($_GET['q-id'])) {
     $qid = $_GET['q-id'];
     include('./client/question-details.php');
+
+}
+// for getting category id
+elseif(isset($_GET['c-id'])){
+    $cid = $_GET['c-id'];
+   include('./client/questions.php');
 
 }
 else{
