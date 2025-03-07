@@ -8,7 +8,17 @@
         <?php
 
 include('./common/db.php');
-$query = "select * from questions";
+if(isset($_GET['c-id'])){
+
+    $query = "select * from questions where category_id = $cid";
+
+}
+else{
+    echo "all quesion query is executed ";
+    $query = "select * from questions";
+
+}
+// $query = "select * from questions";
 $result = $conn->query($query);
 
     foreach ($result as $row) {
