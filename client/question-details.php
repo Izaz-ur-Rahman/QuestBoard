@@ -6,7 +6,6 @@
     <div class="col-8">
       <?php
       include("./common/db.php");
-
       $query = "select * from questions where id = $qid";
       $result = $conn->query($query);
 
@@ -25,16 +24,19 @@
 
     </div>
     <div class="col-4">
-      <h5>coding category</h5>
       <?php
- 
-      $query = "select * from questions where category_id = $cid";
+      $categoryquery = "select * from categories where id = $cid";
+      $categoryResult = $conn->query($categoryquery);
+      $categoryRow = $categoryResult->fetch_assoc();
+      echo "<h5>" . $categoryRow['name'] . "</h5>";
+
+      $query = "select * from questions where category_id = $cid ";
       $result = $conn->query($query);
       foreach ($result as $row) {
         $id = $row['id'];
         $title = $row['title'];
-        echo "<h5 class='question_title'><a href=?q-id= $id>$title</a></h5>";
-
+        echo "
+        <div class='question_list'><h5 class='question_title'><a href=?q-id= $id>$title</a></h5></div>";
       }
       ?>
     </div>
